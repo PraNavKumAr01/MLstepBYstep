@@ -3,6 +3,8 @@ class Tensor:
     def __init__(self, data):
         self.data = data # Elements of the tensor
         self.shape = self.get_shape() # Shape of the tensor
+        if len(self.shape) == 1:
+            self.data = [data]
 
     # Function to calculate the shape of the tensor
     def get_shape(self):
